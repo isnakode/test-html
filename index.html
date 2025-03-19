@@ -11,12 +11,12 @@
     <script>
         async function start() {
             const res=await fetch("https://test-production-5803.up.railway.app")
-            const datas=(await res.json())['data']
+            const datas=(await res.json())['data']            
 
             const ul=document.querySelector('ul')
-            datas.forEach(data => {
-                const li=document.querySelector('li')
-                li.textContent=data['name']
+            datas.forEach(data => {                
+                const li=document.createElement('li')
+                li.textContent=data.name
                 ul.appendChild(li)
             });  
         }
