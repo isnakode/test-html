@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -9,7 +10,7 @@
     <ul></ul>
     <script>
         async function start() {
-            const res=await fetch("https://test/")
+            const res=await fetch("http://test/")
             const datas=(await res.json())['data']
 
             const ul=document.querySelector('ul')
