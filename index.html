@@ -10,7 +10,7 @@
     <ul></ul>
     <script>
         async function start() {
-            const res=await fetch("http://test.railway.internal:3000")
+            const res=await fetch("https://test-html-production.up.railway.app")
             const datas=(await res.json())['data']
 
             const ul=document.querySelector('ul')
