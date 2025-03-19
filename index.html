@@ -6,6 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Contoh aplikasi gw</p>
+    <ul></ul>
+    <script>
+        async function start() {
+            const res=await fetch("test/")
+            const datas=(await res.json())['data']
+
+            const ul=document.querySelector('ul')
+            datas.forEach(data => {
+                const li=document.querySelector('li')
+                li.textContent=data['name']
+                ul.appendChild(li)
+            });  
+        }
+        start()
+    </script>
 </body>
 </html>
